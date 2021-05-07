@@ -1,0 +1,13 @@
+import sys
+import re
+
+Regex_Pattern = r'^\([+-]?((([0-9]|[1-8][0-9])(\.\d+)?)|90(\.0+)?), [+-]?((([0-9]|[1-9][0-9]|1[0-7][0-9])(\.\d+)?)|180(\.0+)?)\)$'
+
+for place, line in enumerate(sys.stdin):
+    if place != 0:
+        total = line
+        total = total.rstrip()
+        if re.search(Regex_Pattern, total):
+            print("Valid")
+        else:
+            print("Invalid")
