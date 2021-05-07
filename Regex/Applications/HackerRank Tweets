@@ -1,0 +1,15 @@
+import sys
+import re
+
+Regex_Pattern = r'hackerrank'
+counter = 0
+
+for place, line in enumerate(sys.stdin):
+    if place != 0:
+        total = line
+        total = total.rstrip()
+        result1 = (re.search(Regex_Pattern, total.lower()))
+        if result1:
+            counter = counter +1
+
+print(counter)
