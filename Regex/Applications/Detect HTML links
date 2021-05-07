@@ -1,0 +1,13 @@
+import sys
+import re
+
+input = sys.stdin.read()
+
+Regex_pattern = r'<a href="(.*?)".*?> ?([\w ,./]*)(?=</)'
+
+
+results = re.findall(Regex_pattern, input, re.DOTALL)
+
+for item in results:
+    #print(item)
+    print(','.join(item))
