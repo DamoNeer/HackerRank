@@ -1,0 +1,11 @@
+import sys
+import re
+
+input = sys.stdin.read()
+
+Regex_pattern = r'question-summary-([0-9]{1,})".*?class="question-hyperlink">(.+?)</a>.*?class="relativetime">(.+?)</span>'
+
+results = re.findall(Regex_pattern, input, re.DOTALL)
+
+for item in results:
+    print(';'.join(item))
