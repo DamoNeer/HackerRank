@@ -1,0 +1,17 @@
+import sys
+import re
+
+Regex_Pattern = r'<[a-z]+[0-9]?'
+
+
+list = []
+res = []
+answer = ''
+
+for place, line in enumerate(sys.stdin):
+    if place != 0:
+        total = line
+        total = total.rstrip()
+        result1 = (re.findall(Regex_Pattern, total.lower()))
+        for item in result1:
+            list.append(item)
