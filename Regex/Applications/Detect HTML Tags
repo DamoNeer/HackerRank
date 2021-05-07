@@ -1,0 +1,36 @@
+#Python3
+import sys
+import re
+
+Regex_Pattern = r'<[a-z]+[0-9]?'
+
+list = []
+res = []
+answer = ''
+
+for place, line in enumerate(sys.stdin):
+    if place != 0:
+        total = line
+        total = total.rstrip()
+        result1 = (re.findall(Regex_Pattern, total.lower()))
+        for item in result1:
+            list.append(item)
+
+
+for item in list:
+    item = item.replace('<', '')
+    item = item.replace(' ', '')
+    if item not in res:
+        if item !='':
+            res.append(item)
+            
+res.sort()
+
+for item in res:
+    if item != res[-1]:
+        answer = answer + item + ';'
+    else:
+        answer = answer + item
+    
+print(answer)
+
