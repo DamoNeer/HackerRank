@@ -1,0 +1,48 @@
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+
+
+function getLetter(s) {
+    var setA = new Set(['a','e','i','o','u']);
+    var setB = new Set(['b','c','d','f','g']);
+    var setC = new Set(['h','j','k','l','m']);
+    
+    if (setA.has(s[0])){
+        return 'A';
+    } else if (setB.has(s[0])){
+        return 'B';
+    }else if (setC.has(s[0])){
+        return 'C';
+    }else {
+        return 'D';
+    }
+}
+
+
+function main() {
+    const s = readLine();
+    
+    console.log(getLetter(s));
+}
