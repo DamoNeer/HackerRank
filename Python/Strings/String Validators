@@ -1,0 +1,7 @@
+import re
+
+if __name__ == '__main__':
+    s = input()
+    list = [r'[A-Za-z0-9]+', r'[a-zA-Z]+', r'[0-9]+', r'[a-z]+', r'[A-Z]+']
+    for pattern in list:
+        print(bool(re.search(pattern, s)))
