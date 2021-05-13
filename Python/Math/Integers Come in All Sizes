@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import fileinput
+def main():
+    list = []
+    for line in fileinput.input():
+        list.append(line.strip())
+    return (list)
+map = map(int, main())
+final = list(map)
+output = final[0]**final[1] + final[2]**final[3]
+print(output)
