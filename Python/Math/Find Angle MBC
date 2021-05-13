@@ -1,0 +1,12 @@
+import math
+
+degree_sign = u"\N{DEGREE SIGN}"
+
+ab = int(input())
+bc = int(input())
+
+ac = math.sqrt(ab**2 + bc**2)
+mc = ac/2
+adjacent = bc/2
+angle = str(int(round(math.degrees(math.acos(adjacent/mc)))))
+print(angle+degree_sign)
