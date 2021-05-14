@@ -1,0 +1,7 @@
+n = int(input())
+
+x = set()
+for i in range(n):
+    place = input()
+    x.add(place)
+print(len(x))
