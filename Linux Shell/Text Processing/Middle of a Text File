@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Get first 22 lines and only the last 11 lines of it, which means 12th - 22nd lines
+
+head -n 22 | tail -n 11 
