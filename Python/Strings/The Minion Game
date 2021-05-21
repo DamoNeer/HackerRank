@@ -1,3 +1,5 @@
+#!/bin/python3
+
 def minion_game(string):
     vowels = 'AEIOU'
     str_length = len(string)
