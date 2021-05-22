@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#sorting a tab limited file in descending order according to the 2nd field
+
+sort -rn -t $'\t' -k2
