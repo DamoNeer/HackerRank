@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#-n is used to sort numerically
+sort -n 
