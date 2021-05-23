@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#-s puts them in a single
+#-d defines the character used for separation
+
+paste - - - -d "\t"
