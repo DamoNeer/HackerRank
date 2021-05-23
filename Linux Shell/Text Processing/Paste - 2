@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#hyphens define how many consecutive lines to merge
+
+paste - - - -d ';'
