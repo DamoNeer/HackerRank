@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Gets rid of the spaces in front
+
+uniq -c | sed 's/^ *//'
