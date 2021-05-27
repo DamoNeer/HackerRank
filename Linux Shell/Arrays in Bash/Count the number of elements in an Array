@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while read input
+do
+    arr=(${arr[@]} $input)     #Must use @ to reference all elements in an array
+done
+
+echo ${#arr[@]}
