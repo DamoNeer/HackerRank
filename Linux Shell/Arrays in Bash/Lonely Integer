@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read               #skip the first line
+arr=($(cat))       #turn the second line of inputs into an array
+echo "${arr[@]}" | tr ' ' '\n' | sort | uniq -u #replace space with line breaks, sort, then print out the 'lonely' number
