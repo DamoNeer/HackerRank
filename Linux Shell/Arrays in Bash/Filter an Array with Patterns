@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while read input
+do
+    arr=(${arr[@]} $input)     #Create an array
+done
+
+declare -a patter=( ${arr[@]/*[aA]*/} )
+echo ${patter[@]}
