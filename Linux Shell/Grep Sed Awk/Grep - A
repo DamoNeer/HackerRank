@@ -1,0 +1,5 @@
+#!/bin/bash
+
+grep -iw 'the\|that\|then\|those'
+
+#grep -Eiw 'th(e|at|en|ose)'         #This uses regex pattern
