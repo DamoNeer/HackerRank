@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while read input
+do
+    arr+=$input
+    arr+=" "
+done
+arr+=$input
+arrs=("${arr[@]}" "${arr[@]}" "${arr[@]}")
+echo ${arrs[@]}
+
+#The previous while loop drops the last element, so I modified the loop a bit. 
+#Reason why the last element gets dropped - https://stackoverflow.com/questions/12916352/shell-script-read-missing-last-line
