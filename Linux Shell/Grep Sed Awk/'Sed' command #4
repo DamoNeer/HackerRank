@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sed -e 's/[0-9]\+ /**** /g'          #+ means more than one followed by a space and they get repalced by 4 asterisks followed by a space.
+
