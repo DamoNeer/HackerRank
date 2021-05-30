@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -e 's/ the / this /'        #Surrounding the words with spaces to avoid substring "the" getting replaced
