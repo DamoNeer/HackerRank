@@ -1,0 +1,10 @@
+import calendar
+#MM/DD/YY input
+input_list = input().split() #split the string and separte it into month, day, year
+month = int(input_list[0])
+day = int(input_list[1])
+year = int(input_list[2])
+
+output = (calendar.weekday(year, month, day)) #Get the weekday index
+output = (calendar.day_name[output]).upper() #Turn the weekday index into the weekday name and capitalize
+print(output)
