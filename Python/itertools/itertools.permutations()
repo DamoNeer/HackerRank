@@ -1,0 +1,11 @@
+from itertools import permutations
+#Sample input = Hack 2
+string, number = input().split()
+output = list(permutations(string,int(number)))
+output1 = []
+for i in output:
+    element =  ''.join(i)
+    output1.append(element)
+
+for i in (sorted(output1)):
+    print(i)
