@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+
+    scores = []
+    table = []
+    for _ in range(int(input())): #This reads the first line and put it as a counter for the loop
+        name = input() 
+        score = float(input())
+        table.append([name, score]) #Created a nested list for name and corresponding score
+        scores.append(score) #Created a list just for score
+    
+    sorted_output = sorted(list(set(scores)))
+    second_highest = sorted_output[1]
+    sorted_table = (sorted(table))
+    for i, j in sorted_table:
+        if j == second_highest:
+            print(i)
+
+        
