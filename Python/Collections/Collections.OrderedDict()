@@ -1,0 +1,17 @@
+from collections import OrderedDict
+
+N = int(input())
+ordered_dictionary = OrderedDict()
+for i in range(N):
+    item_list = (input()).split()
+    quantity = int(item_list[-1])
+    item_list.pop()
+    item = ' '.join(item_list)
+
+    if ordered_dictionary.get(item):
+        ordered_dictionary[item] += int(quantity)
+    else:
+        ordered_dictionary[item] = int(quantity)
+
+for j,k in ordered_dictionary.items():
+    print(j,k)
